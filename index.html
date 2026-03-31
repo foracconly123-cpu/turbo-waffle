@@ -20,15 +20,21 @@
       position: absolute;
       top: 0;
       left: 0;
+      
+      /* STRETCH CONTROL: */
+      /* scale(1, 1.15) means 100% width, 115% height. */
+      transform: scale(1, 1.15); 
+      transform-origin: top left;
     }
 
-    /* 3. The Iframe */
+    /* 3. The Iframe with the Banner Crop */
     iframe {
       width: 192px;
-      height: 256px; /* Taller so the bottom isn't cut off */
+      height: 256px; 
       border: none;
       position: absolute;
-      top: 0px; 
+      /* Shifts the Google Banner up so it's not visible */
+      top: -55px; 
       left: 0;
     }
   </style>
