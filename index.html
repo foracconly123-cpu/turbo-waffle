@@ -2,34 +2,37 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=192, initial-scale=1.0">
   <title>Air Quality Dashboard</title>
   <style>
-    /* 1. Make the base page black and remove all spacing */
+    /* 1. Set background to black and remove all browser spacing */
     body, html { 
       margin: 0; 
       padding: 0; 
-      width: 100%; 
-      height: 100%; 
       background-color: #000; 
       overflow: hidden; 
-      display: block; /* Removes flex centering */
     }
 
-    /* 2. Position the dashboard container at the absolute top-left */
-    .crop-frame {
+    /* 2. A simple container fixed to the top-left */
+    .container {
       width: 192px;
       height: 256px;
       overflow: hidden;
       position: absolute;
       top: 0;
       left: 0;
-      background: #000;
+    }
+
+    /* 3. The Iframe at its native size */
+    iframe {
+      width: 192px;
+      height: 256px;
+      border: none;
+      display: block;
     }
   </style>
 </head>
 <body>
-  <div class="crop-frame">
+  <div class="container">
     <iframe src="https://script.google.com/macros/s/AKfycbxreCIBZlB0woWccbG_6zTHGaYLVPGHVidsZOscTGDfNJtKvD7rRjg8qIk-Q9woghE22w/exec"></iframe>
   </div>
 </body>
