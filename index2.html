@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Air Quality Monitor</title>
+  <style>
+    /* 1. Reset everything to black and zero out gaps */
+    body, html { 
+      margin: 0; 
+      padding: 0; 
+      background-color: #000; 
+      overflow: hidden; 
+    }
 
+    /* 2. The 192x256 Box stuck to the top-left */
+    .dashboard-box {
+      width: 192px;
+      height: 256px;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      
+      /* VERTICAL STRETCH CONTROL */
+      /* Change 1.25 to 1.3 if you still see space at the bottom */
+      transform: scale(1, 1.11); 
+      transform-origin: top left;
+    }
+
+    /* 3. The Iframe with the Banner Crop */
+    iframe {
+      width: 192px;
+      height: 312px; 
+      border: none;
+      position: absolute;
+      /* Shifts the Google Banner up so it's not visible */
+      top: 0px; 
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-box">
+    <iframe src="https://script.google.com/macros/s/AKfycbwRkL7pkRLQ9MFdM5YyesC2pVvqokBk1rJRZQvnz5IwxviV-gi0VDAlR98yO5JT0tHm/exec"></iframe>
+  </div>
+</body>
+</html>
