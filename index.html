@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Air Quality Dashboard</title>
+  <title>Air Quality Monitor</title>
   <style>
-    /* 1. Set background to black and remove all browser spacing */
+    /* 1. Reset everything to black and zero out gaps */
     body, html { 
       margin: 0; 
       padding: 0; 
@@ -12,8 +12,8 @@
       overflow: hidden; 
     }
 
-    /* 2. A simple container fixed to the top-left */
-    .container {
+    /* 2. The 192x256 Box stuck to the top-left */
+    .dashboard-box {
       width: 192px;
       height: 256px;
       overflow: hidden;
@@ -22,18 +22,22 @@
       left: 0;
     }
 
-    /* 3. The Iframe at its native size */
+    /* 3. The Iframe */
     iframe {
       width: 192px;
-      height: 256px;
+      height: 310px; /* Taller so the bottom isn't cut off */
       border: none;
-      display: block;
+      position: absolute;
+      /* This shifts the content UP to hide the Google Banner 
+         Change this to 0px if you WANT to see the banner */
+      top: -55px; 
+      left: 0;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <iframe src="https://script.google.com/macros/s/AKfycbxreCIBZlB0woWccbG_6zTHGaYLVPGHVidsZOscTGDfNJtKvD7rRjg8qIk-Q9woghE22w/exec"></iframe>
+  <div class="dashboard-box">
+    <iframe src="PASTE_YOUR_URL_HERE"></iframe>
   </div>
 </body>
 </html>
